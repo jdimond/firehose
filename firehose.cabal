@@ -1,0 +1,29 @@
+Name:                firehose
+Version:             0.0
+Description:         Firebase style websockets
+License:             BSD3
+License-file:        LICENSE
+Author:              Jonathan Dimond
+Maintainer:          mail@dimond.de
+Build-Type:          Simple
+Cabal-Version:       >=1.14
+
+Executable FireHose
+  Main-is:           FireHose.hs
+  Default-Language:  Haskell2010
+  Other-Modules:     Data.ListenerTree
+  Build-Depends:     base >= 3 && < 5,
+                     websockets >= 0.7.4,
+                     text >= 0.11,
+                     transformers >= 0.3,
+                     unordered-containers >= 0.2.3,
+                     containers >= 0.5.2,
+                     hashable >= 1.2,
+                     mtl >= 2.1.2,
+                     aeson >= 0.6.1,
+                     template-haskell >=2.7,
+                     bytestring >= 0.10,
+                     network >= 2.4
+  hs-source-dirs:    src
+  GHC-Options:       -Wall -threaded -O3 -rtsopts
+  GHC-Prof-Options:  -auto-all -caf-all
